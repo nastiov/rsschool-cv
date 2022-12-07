@@ -54,6 +54,7 @@ _______________________
     - C#
     - JS
     - GitHub
+
 _______________________
 
 ## **SOFT SKILLS**
@@ -63,7 +64,7 @@ _______________________
     Organizational skills
     Problem-solving skills
     Willingness to learn
-_______________________
+
 
 
 ### **PERSONAL CHARACTERISTICS**
@@ -72,6 +73,8 @@ _______________________
     Calm
     Reliable
     Honest
+
+    
 _______________________
 
 
