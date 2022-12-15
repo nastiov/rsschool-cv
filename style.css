@@ -4,10 +4,10 @@
   margin: 0%;
 }
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth; /* чтобы прокрутка происходила плавно*/
 }
 ul{
-    list-style: none;
+    list-style: none; /* убрать стандартные маркеры из всех списков */
 }
 
 /* Used colors Start */
@@ -23,13 +23,42 @@ ul{
 /* Body Style Start */
 body {
   font-family: 'Raleway', sans-serif;
-  font-family: 'Roboto', sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  flex-direction: column; /*прижать footer к низу страницы*/
+  justify-content: space-between; /*определяет выравнивание элементов по главной оси (выравнивание по вертикали из-за flex-direction: column;), крайние прижаты к границам родителя */
+  min-height: 100vh; /*body не может быть меньше высоты страницы*/
 }
 /* Body Style End */
+/* Header Style Start */
+.header {
+  background-color: var(--main-color);
+  padding: 3px 10px 0 10px;
+  text-align: center;
+}
+.nav-list {
+  display: flex; /*разместить все элементы навигации в строку*/
+  justify-content: flex-end; /* сдвинуть их вправо */
+  align-items: center; /* выровнять по центру по высоте */
+  padding: 10px 30px; /* отступы ссылкам, а не элементам списка */
+  line-height: 10px; /* промежуток между строчек */
+  transition: .2s;
+}
+.nav-item {
+  border-spacing: 5px 1rem;
+  box-sizing: border-box;
+}
+.nav-item a {
+  color: var(--white);
+  text-decoration: none;
+  transform: color 0.3s;
+}
+.nav-item a:hover {
+  color: var(--text-color);
+  text-decoration-color: var(--white);
+}
+/* Header Style End */
+/* Main Style Start */
+/* Main Style End */
 /* Footer Style Start */
 .footer{
   background-color: var(--light-mint);
@@ -40,6 +69,9 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+.footer_block {
+  align-items: center;
 }
 .footer_image{
   background-position: center;
@@ -52,7 +84,7 @@ body {
 .footer_rs_link {
   color: var(--text-color);
   text-decoration: none;
-  align-items: center;
+  display: inline;
 }
 .footer_rs_link:hover {
   color: var(--text-color);
@@ -70,6 +102,9 @@ body {
   width: 30px;
   height: 30px;
   margin: 10px 10px 10px 10px;
+}
+.footer_text {
+  color: var(--text-color);
 }
 /* Footer Style End */
 /* Media Start */
