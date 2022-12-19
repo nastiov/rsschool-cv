@@ -1,0 +1,211 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+html {
+  scroll-behavior: smooth; /* чтобы прокрутка происходила плавно*/
+}
+ul{
+    list-style: none; /* убрать стандартные маркеры из всех списков */
+}
+
+/* Used colors Start */
+:root {
+    --main-color: #FBE2CC;
+    --text-color: #442E23;
+    --white: #f7f7f2;
+    --mint: #D5E1DF;
+    --light-mint: #D3E3D6;
+    --pink: #E7B2A7;
+  }
+/* Used colors End */
+/* Body Style Start */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'ralewayregular';
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column; /*прижать footer к низу страницы*/
+  justify-content: space-between; /*определяет выравнивание элементов по главной оси (выравнивание по вертикали из-за flex-direction: column;), крайние прижаты к границам родителя */
+  min-height: 100vh; /*body не может быть меньше высоты страницы*/
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Body Style End */
+/* Header Style Start */
+.header {
+  background-color: var(--main-color);
+  padding: 3px 10px 0 10px;
+  text-align: center;
+  height: 5vh;
+}
+.nav-list {
+  display: flex; /*разместить все элементы навигации в строку*/
+  justify-content: flex-end; /* сдвинуть их вправо */
+  align-items: center; /* выровнять по центру по высоте */
+  padding: 10px 30px; /* отступы ссылкам, а не элементам списка */
+  line-height: 10px; /* промежуток между строчек */
+  transition: .2s;
+}
+.nav-item {
+  border-spacing: 5px 1rem;
+  box-sizing: border-box;
+}
+.nav-item a {
+  color: var(--white);
+  text-decoration: none;
+  transform: color 0.3s;
+}
+.nav-item a:hover {
+  color: var(--text-color);
+  text-decoration-color: var(--white);
+}
+/* Header Style End */
+/* Main Style Start */
+.main {
+  display: flex;
+  height: 90vh;
+  font-family: 'Raleway';
+}
+.contener_left {
+  width: 40%;
+  background-color: var(--mint);
+  padding: 0 50px 0 70px;
+}
+.main_avatar::before {
+  content: '';
+  position: absolute;
+  right: 170px;
+  top: -30px;
+  display: block;
+  background-color: var(--pink);
+  width: 150px;
+  height: 150px;
+  opacity: .3;
+  border-radius: 50%;
+  }
+.main_avatar {
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  width: 250px;
+  margin: 50px auto;
+  position: relative;
+  opacity: .9;  
+}
+.main_avatar::after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 10px;
+  display: block;
+  background-color: var(--main-color);
+  width: 70px;
+  height: 70px;
+  opacity: .9;
+  border-radius: 50%;
+  }
+.avatar {
+  border-radius: 50%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 15px solid var(--white);
+}
+.section-item.contacts-item a {
+  color: var(--text-color);
+}
+.contacts-item a:hover{
+  color: var(--white);
+}
+.section a {
+  color: var(--text-color);
+}
+.section a:hover{
+  color: var(--white);
+}
+.contener_right {
+  width: 60%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+}
+.profile_block.main_name, .profile_block.main_position {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.main_name {
+  font-family: 'Raleway';
+	font-size: 45px;
+}
+#summary.p {
+  font-family: 'ralewayregular';
+}
+/* Main Style End */
+/* Footer Style Start */
+.footer{
+  background-color: var(--light-mint);
+  padding: 3px 10px 0 10px;
+  text-align: center;
+  height: 5vh;
+}
+.footer_inner{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.footer_block {
+  align-items: center;
+}
+.footer_image{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+  width: 70px;
+  margin: 10px 10px 10px 10px;
+}
+.footer_rs_link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline;
+}
+.footer_rs_link:hover {
+  color: var(--text-color);
+  background: var(--mint); 
+  text-decoration: underline;
+  align-items: center;
+}
+.footer_github{
+  background-image: url(assets/img/github.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px 10px 10px;
+}
+.footer_text {
+  color: var(--text-color);
+}
+/* Footer Style End */
+/* Media Start */
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+@media (max-width: 420px){
+  .footer_inner{
+      flex-direction: column;
+  }
+}
+/* Media End */
