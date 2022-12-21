@@ -112,6 +112,30 @@
       <section class="section" id="code">
         <h2 class="section-block">Code</h2>
         <a href="https://github.com/nastiov" target="blank" title="github">code inside</a>
+       
+        <p class="code-example">
+          <pre><code>
+            <pre class="javascript" style="font-family:monospace;"><span style="color: #006600; font-style: italic;">// Проверка ввод слов и сортировка по кол-ву гласных </span></pre>
+<pre class="javascript" style="font-family:monospace;"><span style="color: #000066; font-weight: bold;">function</span> match<span style="color: #009900;">&#40;</span>str<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+  <span style="color: #000066; font-weight: bold;">return</span> str.<span style="color: #660066;">toLowerCase</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">match</span><span style="color: #009900;">&#40;</span><span style="color: #009966; font-style: italic;">/[ауоыиэяюёеaeiouy]/g</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span>.<span style="color: #660066;">length</span> <span style="color: #339933;">||</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+<span style="color: #000066; font-weight: bold;">function</span> sorterLetters<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+  <span style="color: #000066; font-weight: bold;">const</span> number <span style="color: #339933;">=</span> <span style="">Number</span><span style="color: #009900;">&#40;</span>prompt<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Введите количество слов (n): '</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">trim</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+  <span style="color: #000066; font-weight: bold;">const</span> arrWord <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span><span style="color: #006600; font-style: italic;">// пустой массив для введённых слов</span>
+  <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span>let i <span style="color: #339933;">=</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;=</span> number<span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    arrWord.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>prompt<span style="color: #009900;">&#40;</span>`Введите слово №$<span style="color: #009900;">&#123;</span>i<span style="color: #009900;">&#125;</span><span style="color: #339933;">:</span> `<span style="color: #009900;">&#41;</span>.<span style="color: #660066;">trim</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// Добавить значение в конец</span>
+  <span style="color: #009900;">&#125;</span>
+    arrWord.<span style="color: #660066;">sort</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>a<span style="color: #339933;">,</span> b<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+  <span style="color: #000066; font-weight: bold;">return</span> match<span style="color: #009900;">&#40;</span>a<span style="color: #009900;">&#41;</span> <span style="color: #339933;">-</span> match<span style="color: #009900;">&#40;</span>b<span style="color: #009900;">&#41;</span>
+  <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+  <span style="color: #000066; font-weight: bold;">return</span> arrWord<span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+alert<span style="color: #009900;">&#40;</span>arrWord.<span style="color: #660066;">join</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot; &quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span>sorterLetters<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+          </code></pre>
+      </p>
+
+
       </section>
       <section class="section" id="projects">
         <h2 class="section-block">Projects</h2>
